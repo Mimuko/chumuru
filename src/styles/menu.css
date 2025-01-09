@@ -1,0 +1,76 @@
+/*--------------------------------
+	Specific Styles
+--------------------------------*/
+
+.decorationImg {
+    display: none;
+    @media (min-width: 1024px) {
+        display: block;
+        width: 260px;
+        height: auto;
+        position: absolute;
+        top: 40px;
+        left: 0;
+        z-index: -1;
+    }
+    @media (min-width: 1440px) {
+        width: 358px;
+        height: 229px;
+        left: 40px;
+        top: 90px;
+    }
+}
+
+.overlayHead {
+    @media (min-width: 768px) {
+        min-height: 140px;
+    }
+}
+
+.overlayHeadGroup {
+    top: 20px;
+    @media (min-width: 768px) {
+        top: 50px;
+    }
+}
+
+.rowTypeMenu {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    margin-block-start: 40px;
+    @media (min-width: 768px) {
+        margin-block-start: 80px;
+    }
+}
+
+.menuBox {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    font-weight: 500;
+}
+
+.menuBoxTtl {
+    border: 1px solid var(--accent-color);
+    max-width: 170px;
+    text-align: left;
+    padding: 4px 0;
+    font-size: 1.8rem;
+    color: var(--accent-color);
+    text-align: center;
+    margin-block-end: 8px;
+}
+
+.menuBoxItem {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(68, 48, 11, 0.2);
+    column-gap: 24px;
+    padding-block-end: 8px;
+}
+
+.menuBoxItemPrice {
+    text-align: right;
+    font-size: 1.8rem;
+}

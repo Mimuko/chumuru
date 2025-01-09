@@ -1,0 +1,323 @@
+/*--------------------------------
+	decoration
+--------------------------------*/
+
+.decorationImg {
+    display: none;
+    @media (min-width: 1440px) {
+        display: block;
+        width: 312px;
+        height: 200px;
+        position: absolute;
+        top: 580px;
+        left: 90px;
+        z-index: 0;
+    }
+}
+
+.illustDecoration {
+    position: relative;
+}
+
+:is(.handIllust, .intestineIllust) {
+    display: none;
+    @media (min-width: 1440px) {
+        display: block;
+        width: 13%;
+    }
+}
+
+.handIllust {
+    position: absolute;
+    top: 280px;
+    right: 0;
+}
+
+.intestineIllust {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+}
+
+
+/*--------------------------------
+	layout
+--------------------------------*/
+
+.firstView {
+    display: block;
+    @media (min-width: 768px) {
+        max-width: 1360px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    @media (min-width: 1024px) {
+        margin-bottom: 80px;
+        justify-content: space-between;
+    }
+}
+
+.firstViewImg {
+    position: relative;
+    z-index: 1;
+    @media (min-width: 768px) {
+        max-height: 570px;
+        max-width: 1075px;
+    }
+    & .img {
+        width: auto;
+        min-height: 300px;
+        @media (min-width: 768px) {
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        @media (min-width: 1024px) {
+            max-width: 1075px;
+        }
+    }
+}
+
+.firstViewImgTtl {
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    top: 16px;
+    left: 24px;
+    z-index: 2;
+    @media (min-width: 768px) {
+        top: 0;
+        bottom: 0;
+        margin-block: auto;
+    }
+    @media (min-width: 1024px) {
+        left: 80px;
+    }
+}
+
+.firstViewImgTtlTxt {
+    font-size: 1.5rem;
+    color: var(--white-color);
+    writing-mode: vertical-rl;
+    font-family: "Shippori Mincho", serif;
+    font-weight: 500;
+    line-height: 2.3;
+    letter-spacing: .4rem;
+    @media (min-width: 768px) {
+        font-size: 2.4rem;
+        letter-spacing: .4rem;
+    }
+    @media (min-width: 1024px) {
+        font-size: 3.2rem;
+    }
+}
+
+.firstViewHead {
+    display: none;
+    @media (min-width: 1024px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        writing-mode: vertical-rl;
+        width: 100%;
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.firstViewTtl {
+    font-weight: 100;
+    font-size: 8.4rem;
+    color: var(--accent-color);
+    word-break: break-all;
+    font-family: "Outfit", sans-serif;
+}
+
+.firstViewDesc {
+    display: none;
+    @media (min-width: 1440px) {
+        display: block;
+        font-weight: 100;
+        color: var(--text-color);
+    }
+}
+
+.conceptRow {
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+    margin-bottom: 80px;
+    width: 100%;
+    @media (min-width: 1024px) {
+        flex-direction: row-reverse;
+        column-gap: 105px;
+        margin-bottom: 86px;
+    }
+    &:nth-child(1) {
+        @media (min-width: 1024px) {
+            justify-content: space-between;
+            max-width: 1033px;
+        }
+    }
+    &:nth-child(2) {
+        @media (min-width: 1024px) {
+            justify-content: flex-start;
+        }
+    }
+    & .txtBox {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.overlapImgBox {
+    position: relative;
+    height: 220px;
+    @media (min-width: 768px) {
+        height: auto;
+    }
+    @media (min-width: 1024px) {
+        height: 355px;
+    }
+    & .largeImg {
+        width: 95%;
+        @media (min-width: 1024px) {
+            max-width: 498px;
+        }
+    }
+}
+
+.txtBoxHead {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.txtBoxTtl {
+    flex-direction: column;
+    margin-block-end: 0;
+    &:has(.txtBoxTtlEn) {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+.txtBoxTtlEn {
+    letter-spacing: -0.2em;
+}
+
+.txtBoxTtlJa {
+    letter-spacing: 0.4rem;
+}
+
+.largeImg {
+    width: 100%;
+    height: auto;
+    @media (min-width: 1024px) {
+        max-width: 514px;
+    }
+}
+
+.smallImg {
+    max-width: 220px;
+    width: 100%;
+    position: absolute;
+    bottom: -30%;
+    right: 0;
+    @media (min-width: 768px) {
+        max-width: 252px;
+        bottom: -10%;
+    }
+    @media (min-width: 1024px) {
+        bottom: 0;
+    }
+}
+
+.linkBox {
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    @media (min-width: 1024px) {
+        max-width: calc(100% / 2);
+        &:hover {
+            & .backImg {
+                scale: 1.1 1.1;
+            }
+        }
+    }
+}
+
+.imgLink {
+    display: block;
+    width: 100%;
+    height: auto;
+    & .backImg {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.front {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.4rem;
+    color: var(--white-color);
+    z-index: 3;
+}
+
+.frontTxtDesc {
+    font-size: 1.4rem;
+}
+
+.linkSection {
+    padding: 32px 0 64px;
+    margin-top: 56px;
+    margin-bottom: 32px;
+    @media (min-width: 768px) {
+        margin-top: 150px;
+        padding: 72px 0 96px;
+    }
+    @media (min-width: 1440px) {
+        margin-top: 200px;
+    }
+}
+
+.tile {
+    margin: 60px auto -100px;
+    @media (min-width: 768px) {
+        margin: 100px auto -150px;
+    }
+}
+
+.newsArea {
+    max-width: var(--content-width);
+    width: 95%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 0;
+}
+
+.newsItemLink {
+    display: flex;
+    flex-direction: row;
+    column-gap: 16px;
+    @media (min-width: 768px) {
+        flex-direction: column;
+        row-gap: 8px;
+    }
+    & .img {
+        max-width: 30%;
+        @media (min-width: 768px) {
+            max-width: 100%;
+        }
+    }
+}

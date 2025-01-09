@@ -1,0 +1,414 @@
+/*--------------------------------
+	decoration
+--------------------------------*/
+
+.decoration {
+    display: none;
+    @media (min-width: 1024px) {
+        display: block;
+        width: 312px;
+        height: 200px;
+        position: absolute;
+        top: 580px;
+        left: 30px;
+        z-index: 0;
+    }
+}
+
+.illustDecoration {
+    position: relative;
+}
+
+:is(.handIllust, .intestineIllust) {
+    display: none;
+    @media (min-width: 1440px) {
+        display: block;
+        width: 13%;
+    }
+}
+
+.handIllust {
+    position: absolute;
+    top: 280px;
+    right: 0;
+}
+
+.intestineIllust {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+}
+
+
+/*--------------------------------
+	layout
+--------------------------------*/
+
+.section {
+    margin-block-end: 32px;
+    &:has(.decorationImg) {
+        position: relative;
+        z-index: 0;
+    }
+    & .decorationImg {
+        display: none;
+        @media (min-width: 1024px) {
+            display: block;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+        }
+    }
+}
+
+.txtBox:has(.verticalBox) {
+    display: flex;
+    flex-direction: column;
+}
+
+.overlayHead {
+    min-height: 145px;
+    @media (min-width: 768px) {
+        min-height: 140px;
+    }
+}
+
+.overlayHeadEn {
+    @media (min-width: 768px) {
+        white-space: nowrap;
+    }
+}
+
+.imgBox>.img {
+    width: 100%;
+}
+
+.sectionInr {
+    counter-reset: numberTtl;
+}
+
+.txtBoxTtl {
+    font-size: 2.4rem;
+    margin-block-end: 24px;
+}
+
+.conceptRow {
+    @media (min-width: 1024px) {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: flex-end;
+        column-gap: 80px;
+        max-width: 1033px;
+        position: relative;
+        z-index: 2;
+    }
+    &>.txtBox {
+        @media (min-width: 1024px) {
+            height: 474px;
+        }
+    }
+}
+
+.manyImgBox {
+    @media (min-width: 1024px) {
+        position: relative;
+        display: block;
+        width: 613px;
+        height: 560px;
+        z-index: 0;
+    }
+    & .img {
+        position: absolute;
+        &:nth-child(1) {
+            width: 248px;
+            bottom: 0;
+            right: 0;
+            z-index: 2;
+        }
+        &:nth-child(2) {
+            width: 170px;
+            top: 2%;
+            right: -80px;
+            z-index: 2;
+        }
+        &:nth-child(3) {
+            width: 418px;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+    }
+}
+
+.manyImgBoxBack {
+    width: 293px;
+    height: 348px;
+    background: var(--accent-color);
+    position: absolute;
+    bottom: -170px;
+    left: 140px;
+    z-index: -1;
+    @media (min-width: 1024px) {}
+}
+
+.verticalBox {
+    width: auto;
+    height: 70vh;
+    margin: auto;
+    display: inline-block;
+    @media (min-width: 768px) {
+        width: -moz-fit-content;
+        width: fit-content;
+    }
+    @media (min-width: 1024px) {
+        height: auto;
+    }
+    & .txt {
+        padding-bottom: 24px;
+    }
+    & .txt:not(:last-of-type) {
+        margin-block-end: 32px;
+        @media (min-width: 768px) {
+            margin-block-end: 48px;
+        }
+    }
+}
+
+.rowTypeMeal {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    @media (min-width: 1024px) {
+        row-gap: 85px;
+    }
+}
+
+.numberTtl {
+    font-size: 2.4rem;
+    font-weight: 500;
+    margin-block-end: 32px;
+}
+
+.numberCount {
+    color: var(--accent-color);
+    display: flex;
+    align-items: flex-end;
+    font-weight: 400;
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+    &::after {
+        font-size: 5rem;
+        line-height: 1;
+        content: counter(numberTtl, decimal-leading-zero);
+        counter-increment: numberTtl;
+    }
+}
+
+.overlapImgBox {
+    position: relative;
+    z-index: 0;
+    @media (min-width: 1024px) {
+        height: 400px;
+        bottom: 0;
+    }
+    & .smallImg {
+        position: absolute;
+        left: 0;
+        bottom: -30px;
+        z-index: 1;
+        width: 40%;
+        @media (min-width: 768px) {
+            bottom: -50px;
+        }
+        @media (min-width: 1024px) {
+            bottom: 0;
+        }
+    }
+    & .largeImg {
+        display: block;
+        width: 95%;
+        margin-inline-start: auto;
+    }
+}
+
+.boxShadow {
+    max-width: 90%;
+    margin-inline: auto;
+    box-shadow: -16px 16px 0px 0px var(--accent-color);
+}
+
+.bottomLineTtl {
+    color: var(--accent-color);
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 1.4;
+    border-bottom: 1px solid var(--accent-color);
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+}
+
+.hint {
+    margin-bottom: 16px;
+    &>p {
+        display: inline;
+        line-height: 1.4;
+        font-size: 1.8rem;
+        font-weight: 500;
+        background: linear-gradient(transparent 20%, #F9F6B6 20%);
+    }
+}
+
+.rowTypeMeal {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    @media (min-width: 768px) {
+        row-gap: 85px;
+    }
+    & .flex {
+        flex-direction: column;
+        &:nth-child(odd) {
+            @media (min-width: 1024px) {
+                flex-direction: row-reverse;
+            }
+        }
+        @media (min-width: 1024px) {
+            flex-direction: row;
+        }
+    }
+    & .imgBox {
+        @media (min-width: 1024px) {
+            flex-basis: 600px;
+            flex-grow: 1;
+            flex-shrink: 0;
+        }
+    }
+}
+
+.recommendSection {
+    counter-reset: recommendHead;
+    margin-block-start: 24px;
+    @media (min-width: 768px) {
+        margin-block-start: 48px;
+    }
+    & .txt:not(:last-of-type) {
+        margin-block-end: 16px;
+    }
+    & .flex {
+        flex-direction: column;
+        margin-block-end: 40px;
+        @media (min-width: 768px) {
+            margin-block-end: 80px;
+        }
+        @media (min-width: 1024px) {
+            flex-direction: row-reverse;
+            column-gap: 124px;
+        }
+    }
+}
+
+.recommendBox {
+    border: 1px solid var(--accent-color);
+    border-radius: 12px;
+    overflow: hidden;
+    &:not(:last-of-type) {
+        margin-block-end: 32px;
+    }
+}
+
+.recommendHead {
+    background: var(--accent-color);
+    display: flex;
+    justify-content: flex-start;
+    &::before {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        content: counter(recommendHead, decimal-leading-zero);
+        counter-increment: recommendHead;
+        color: var(--white-color);
+        font-size: 2rem;
+        font-weight: 700;
+        max-width: 60px;
+        width: 100%;
+    }
+}
+
+.recommendHeadTtl {
+    color: var(--white-color);
+    font-size: 1.8rem;
+    font-weight: 500;
+    border-left: 1px solid rgba(225, 225, 225, .5);
+    padding: 8px;
+    line-height: 1.5;
+}
+
+.h5Ttl {
+    display: inline-block;
+    color: #BB9246;
+    border-bottom: 1px solid #BB9246;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.recommendBody {
+    padding: 8px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    gap: 16px;
+    @media (min-width: 768px) {
+        padding: 20px 27px 20px 40px;
+    }
+    @media (min-width: 1024px) {
+        grid-template-columns: 1fr auto;
+        grid-template-rows: auto;
+    }
+    & .txtBox {
+        display: inline-block;
+        &>div:not(:last-of-type) {
+            margin-bottom: 16px;
+        }
+    }
+    & .txt:not(:last-of-type) {
+        margin-bottom: 0;
+    }
+    & .imgBox {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        &>.img {
+            width: 50%;
+            height: auto;
+        }
+    }
+}
+
+.imgBox:has(.recommendImgSmoothie) {
+    width: 173px;
+    padding-top: 20px;
+    padding-right: 13px;
+    & .recommendImgSmoothie {
+        width: 100%;
+    }
+}
+
+.imgBox:has(.recommendImgSalad) {
+    width: 307px;
+    & .recommendImgSalad {
+        width: 100%;
+    }
+}
+
+.imgBox:has(.recommendImgDrink) {
+    width: 297px;
+    height: 122px;
+    justify-content: flex-start;
+    & .recommendImgDrink {
+        height: 100%;
+        width: auto;
+        padding-left: 60px;
+    }
+}

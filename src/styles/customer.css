@@ -1,0 +1,387 @@
+/*--------------------------------
+	Specific layout
+--------------------------------*/
+
+.decoration {
+    position: relative;
+}
+
+.decorationImg {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 24px;
+    width: 30%;
+    height: auto;
+    z-index: -1;
+
+    @media (min-width: 1024px) {
+        display: block;
+        right: 0;
+        top: 20px;
+    }
+
+    @media (min-width: 1440px) {
+        right: -50px;
+    }
+}
+
+.content {
+    row-gap: 0;
+}
+
+.pageHeader {
+    margin-block-end: 0;
+}
+
+.sectionBg {
+    position: relative;
+    z-index: 3;
+
+    & .overlayHeadGroup {
+        top: -10px;
+
+        @media (min-width: 768px) {
+            top: 40px;
+        }
+    }
+
+    & .overlayHeadJa {
+        color: var(--text-color);
+
+        @media (min-width: 768px) {
+            font-size: 2.8rem;
+        }
+    }
+
+    & .overlayHeadDesc {
+        color: #BB9246;
+    }
+
+    & .overlayHeadEn {
+        color: var(--white-color);
+        opacity: .6;
+        top: -16px;
+    }
+}
+
+.sectionInr {
+    padding-block-start: 56px;
+    padding-block-end: 56px;
+
+    @media (min-width: 768px) {
+        padding-block-start: 100px;
+        padding-block-end: 100px;
+    }
+
+    &.decoration {
+        padding-block-start: 56px;
+        padding-block-end: 56px;
+    }
+
+    &.rowTypeFlow {
+        padding-block-start: 0;
+        padding-block-end: 0;
+    }
+}
+
+.tile {
+    margin-block-start: 32px;
+    position: relative;
+    z-index: 2;
+    grid-template-columns: repeat(2, minmax(auto, 340px));
+    gap: 16px;
+
+    @media (min-width: 768px) {
+        margin-block-start: 48px;
+        grid-template-columns: repeat(3, minmax(auto, 340px));
+        gap: 40px;
+    }
+}
+
+.tileItem {
+    position: relative;
+    z-index: 2;
+}
+
+.tileItemTtl {
+    color: var(--white-color);
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+    @media (min-width: 768px) {
+        bottom: 20px;
+    }
+
+    @media (min-width: 1024px) {
+        font-size: 2rem;
+    }
+}
+
+.overlayHead {
+    min-height: 72px;
+
+    @media (min-width: 768px) {
+        min-height: 140px;
+    }
+
+    & .txt {
+        color: #333333;
+        font-weight: 400;
+    }
+
+    &:not(:has(.overlayHeadJa)) .overlayHeadEn {
+        top: 0;
+    }
+}
+
+.overlayHeadJa {
+    line-height: 1.3;
+}
+
+.triangle {
+    position: absolute;
+    bottom: -24px;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+.cooperation {
+    text-align: center;
+    color: var(--accent-color);
+    font-weight: 500;
+
+    &>.txt {
+        display: inline;
+        font-size: 2rem;
+        letter-spacing: 0.5rem;
+        border-bottom: 1px solid var(--accent-color);
+
+        @media (min-width: 768px) {
+            font-size: 2.4rem;
+        }
+    }
+}
+
+.rowTypeCustomer {
+    counter-reset: numberTtl;
+    display: flex;
+    flex-direction: column;
+    row-gap: 56px;
+    max-width: var(--content-width);
+    width: 95%;
+    margin: 0 auto 80px;
+
+    @media (min-width: 1024px) {
+        margin-block-end: 128px;
+    }
+
+    & .imgBox {
+        @media (min-width: 1024px) {
+            flex-basis: 600px;
+            flex-grow: 1;
+            flex-shrink: 0;
+        }
+
+        & .img {
+            width: 100%;
+        }
+    }
+
+    & .flex {
+        flex-direction: column;
+
+        @media (min-width: 1024px) {
+            flex-direction: row;
+
+            &:nth-child(even) {
+                flex-direction: row-reverse;
+            }
+        }
+    }
+}
+
+.numberTtl {
+    font-size: 2.4rem;
+    font-weight: 500;
+    margin-block-end: 16px;
+    letter-spacing: .3rem;
+
+    @media (min-width: 768px) {
+        margin-block-end: 32px;
+        letter-spacing: .2rem;
+    }
+}
+
+.numberCount {
+    color: var(--accent-color);
+    display: flex;
+    align-items: flex-end;
+    font-weight: 400;
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+
+    &::after {
+        font-size: 5rem;
+        line-height: 1;
+        content: counter(numberTtl, decimal-leading-zero);
+        counter-increment: numberTtl;
+    }
+}
+
+.rowTypeFlow {
+    counter-reset: flowNumber;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+
+    @media (min-width: 768px) {
+        row-gap: 64px;
+    }
+}
+
+.flowBox {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-template-rows: auto auto auto auto;
+    gap: 24px;
+
+    @media (min-width: 768px) {
+        grid-template-columns: 100px 1fr;
+        grid-template-rows: 100px 1fr;
+        gap: 40px;
+    }
+
+    @media (min-width: 1024px) {
+        border-bottom: 1px solid var(--text-color);
+        padding-block-end: 40px;
+        position: relative;
+        row-gap: 0;
+        column-gap: 20px;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 20px;
+            height: 20px;
+            border-top: 1px solid var(--text-color);
+            border-right: 1px solid var(--text-color);
+            background: var(--gray-color);
+            rotate: 135deg;
+            position: absolute;
+            right: 0;
+            bottom: -11px;
+            left: 0;
+            margin: auto;
+        }
+    }
+
+    @media (min-width: 1440px) {
+        column-gap: 24px;
+    }
+
+    &:last-of-type {
+        border-bottom: none;
+
+        &::after {
+            display: none;
+        }
+    }
+}
+
+.flowBoxTtl {
+    color: var(--accent-color);
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.flowBoxNum {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border: .5px solid var(--text-color);
+    border-radius: 50%;
+    grid-column: 1 / 1;
+
+    &::after {
+        content: counter(flowNumber, decimal-leading-zero);
+        counter-increment: flowNumber;
+        color: var(--text-color);
+        font-size: 2.4rem;
+    }
+
+    @media (min-width: 768px) {
+        width: 100px;
+        height: 100px;
+
+        &::after {
+            font-size: 2.8rem;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+    }
+}
+
+.flowBoxHead {
+    grid-column: 2 / 3;
+    align-self: center;
+
+    @media (min-width: 1024px) {
+        grid-row: 1 / 2;
+    }
+}
+
+.flowBoxBody {
+    grid-column: 1 / 3;
+
+    @media (min-width: 1024px) {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+
+    & .normalBtnArea {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        column-gap: 20px;
+
+        & .normalBtn {
+            width: 100%;
+            margin: 0;
+        }
+
+        & .contactBtn {
+            border: 1px solid var(--text-color);
+        }
+    }
+
+    & .txt {
+        font-size: 1.4rem;
+        font-weight: 400;
+    }
+}
+
+.flowBoxFoot {
+    grid-column: 1 / 3;
+
+    @media (min-width: 1024px) {
+        grid-column: 3 / 4;
+        grid-row: 1 / 3;
+        max-width: 340px;
+    }
+
+    &>.img {
+        width: 100%;
+    }
+}

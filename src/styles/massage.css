@@ -1,0 +1,272 @@
+/*--------------------------------
+	layout
+--------------------------------*/
+
+.illustDecoration {
+    position: relative;
+    z-index: 0;
+}
+
+.handIllust {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 24px;
+    width: 165px;
+    height: auto;
+    @media (min-width: 768px) {
+        display: block;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        width: 100px;
+    }
+    @media (min-width: 1024px) {
+        right: 130px;
+    }
+}
+
+.overlayHead {
+    min-height: 330px;
+    @media (min-width: 768px) {
+        min-height: 170px;
+    }
+    & .txt {
+        color: #333333;
+        font-weight: 400;
+    }
+    &:not(:has(.overlayHeadJa)) .overlayHeadEn {
+        top: 0;
+    }
+}
+
+.grayBg {
+    background: #F0F0F0;
+    & .overlayHead {
+        text-align: left;
+        min-height: 100px;
+        margin-block-end: 16px;
+        @media (min-width: 768px) {
+            min-height: 160px;
+            margin-block-end: 32px;
+        }
+    }
+    & .overlayHeadGroup {
+        width: auto;
+        top: 20px;
+        left: 0;
+        @media (min-width: 768px) {
+            top: 30px;
+            height: fit-content;
+        }
+    }
+    & .overlayHeadJa {
+        color: var(--text-color);
+    }
+    & .overlayHeadDes {
+        color: #BB9246;
+    }
+    & .overlayHeadEn {
+        color: var(--text-color);
+        text-align: left;
+    }
+    & .sectionInr {
+        padding: 56px 0;
+        @media (min-width: 768px) {
+            padding: 80px 0 100px;
+        }
+    }
+    & .flex {
+        & .img {
+            width: 100%;
+        }
+        @media (min-width: 768px) {
+            flex-direction: column;
+        }
+        @media (min-width: 1024px) {
+            flex-direction: row-reverse;
+        }
+    }
+    & .txtBox {
+        & .txt:not(:last-of-type) {
+            margin-block-end: 24px;
+        }
+    }
+}
+
+.cooperation {
+    text-align: center;
+    color: var(--accent-color);
+    font-weight: 500;
+    margin: 16px 0;
+    @media (min-width: 768px) {
+        margin-block-end: 32px;
+    }
+    &>.txt {
+        display: inline;
+        font-size: 2rem;
+        letter-spacing: 0.5rem;
+        border-bottom: 1px solid var(--accent-color);
+        @media (min-width: 768px) {
+            font-size: 2.4rem;
+        }
+    }
+}
+
+.sectionInr {
+    counter-reset: numberTtl;
+}
+
+.numberTtl {
+    margin-block-end: 32px;
+}
+
+.numberCount {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--text-color);
+    @media (min-width: 768px) {
+        font-size: 2.4rem;
+    }
+}
+
+.numberTtlDes {
+    color: var(--accent-color);
+    font-size: 1.4rem;
+    letter-spacing: .3rem;
+}
+
+.txtBold {
+    font-weight: 700;
+}
+
+.sectionRead {
+    text-align: center;
+    &:has(.img) {
+        margin-block-end: 40px;
+        @media (min-width: 768px) {
+            margin-block-end: 80px;
+        }
+    }
+}
+
+.leftTtlSection {
+    padding-block-start: 50px;
+    padding-block-end: 50px;
+    @media (min-width: 1024px) {
+        padding-block-start: 100px;
+        padding-block-end: 100px;
+    }
+    & .sectionHead {
+        text-align: center;
+    }
+    & .overlayHead {
+        display: none;
+        @media (min-width: 1024px) {
+            display: block;
+        }
+    }
+    & .overlayHeadEn {
+        @media (min-width: 768px) {
+            & {
+                letter-spacing: 1rem;
+                height: auto;
+            }
+        }
+    }
+    &:not(:has(.overlayHeadJa)) .overlayHeadEn {
+        top: 66px;
+    }
+}
+
+.imgBox>.img {
+    width: 100%;
+}
+
+.rowTypeMassage {
+    display: flex;
+    flex-direction: column;
+    row-gap: 80px;
+    margin-block-start: 76px;
+    @media (min-width: 1024px) {
+        row-gap: 100px;
+    }
+    & .txtBox {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        z-index: 1;
+        &::after {
+            font-size: 13rem;
+            line-height: 1;
+            content: counter(numberTtl, decimal-leading-zero);
+            counter-increment: numberTtl;
+            color: var(--light-gray-color);
+            position: absolute;
+            top: -60px;
+            left: 0;
+            z-index: -1;
+        }
+        @media (min-width: 768px) {
+            &::after {
+                top: -65px;
+                left: -10px;
+                font-size: 15rem;
+            }
+        }
+        @media (min-width: 1024px) {
+            min-height: 108px;
+            width: fit-content;
+            &::after {
+                top: -85px;
+                left: -40px;
+                font-size: 16.2rem;
+            }
+        }
+        & .txt {
+            &:not(:last-of-type) {
+                margin-block-end: 0;
+            }
+        }
+    }
+    & .flex {
+        @media (min-width: 768px) {
+            flex-direction: column;
+        }
+        @media (min-width: 1024px) {
+            flex-direction: row;
+        }
+        &:nth-child(odd) {
+            @media (min-width: 1024px) {
+                flex-direction: row-reverse;
+            }
+        }
+    }
+    & .imgBox {
+        @media (min-width: 1024px) {
+            flex-basis: 600px;
+            flex-shrink: 0;
+        }
+    }
+}
+
+.overlapImgBox {
+    position: relative;
+    z-index: 0;
+    & .smallImg {
+        position: absolute;
+        left: 0;
+        bottom: -30px;
+        z-index: 1;
+        width: 40%;
+        @media (min-width: 768px) {
+            bottom: -20px;
+        }
+    }
+    & .largeImg {
+        display: block;
+        width: 95%;
+        margin-inline-start: auto;
+    }
+}

@@ -1,0 +1,266 @@
+/*--------------------------------
+	access
+--------------------------------*/
+
+.access {
+    position: relative;
+    z-index: 0;
+    margin-bottom: 40px;
+    @media (min-width: 768px) {
+        margin-bottom: 80px;
+    }
+    & .decorationImg {
+        display: none;
+        @media (min-width: 1024px) {
+            display: block;
+            width: 312px;
+            height: 200px;
+            position: absolute;
+            top: 350px;
+            right: 0;
+            left: auto;
+            z-index: 1;
+        }
+        @media (min-width: 1440px) {
+            top: 400px;
+            right: -160px;
+        }
+    }
+}
+
+.accessRow {
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+    margin-bottom: 40px;
+    width: 100%;
+    @media (min-width: 1024px) {
+        flex-direction: row;
+        margin-bottom: 0;
+        column-gap: 64px;
+    }
+}
+
+.accessInfo {
+    position: relative;
+    z-index: 2;
+}
+
+.accessInfoItem {
+    padding-bottom: 8px;
+    border-bottom: 1px solid #DBDBDB;
+    display: flex;
+    column-gap: 16px;
+    @media (min-width: 768px) {
+        margin-inline: auto;
+    }
+    &:has(.img) {
+        align-items: flex-end;
+        border: none;
+    }
+    &:not(:last-of-type) {
+        margin-bottom: 16px;
+        @media (min-width: 768px) {
+            margin-bottom: 16px;
+        }
+    }
+    & .img {
+        max-width: 50%;
+    }
+    &+.normalBtn {
+        margin-top: 24px;
+        @media (min-width: 1024px) {
+            margin: 40px auto 0 0;
+        }
+    }
+}
+
+.accessInfoItemHead {
+    max-width: 25%;
+    width: 100%;
+    @media (min-width: 768px) {
+        max-width: 25%;
+    }
+}
+
+
+/*--------------------------------
+    reservation
+  --------------------------------*/
+
+.normalBtnArea {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    margin-top: 16px;
+    @media (min-width: 768px) {
+        flex-direction: row;
+        align-items: flex-end;
+        margin-top: 32px;
+    }
+}
+
+.reservation {
+    margin-bottom: 40px;
+    @media (min-width: 768px) {
+        margin-bottom: 75px;
+    }
+    & .txt:not(:last-of-type) {
+        margin-bottom: 16px;
+    }
+    & .sectionInr {
+        padding: 30px 0 40px;
+        position: relative;
+        z-index: 2;
+        @media (min-width: 768px) {
+            padding: 60px 0 80px;
+            max-width: var(--medium-width);
+            text-align: center;
+        }
+    }
+}
+
+.reservationTtl {
+    text-align: center;
+    margin-bottom: 16px;
+    @media (min-width: 768px) {
+        margin-bottom: 24px;
+    }
+}
+
+.reservationTtlTxt {
+    font-size: 2rem;
+    @media (min-width: 768px) {
+        font-size: 2.8rem;
+    }
+}
+
+.reservationTtlDesc {
+    font-size: 1.4rem;
+}
+
+.lineBtn {
+    background: #22BA4F;
+    font-weight: 500;
+    justify-content: center;
+    @media (min-width: 768px) {
+        max-width: 211px;
+    }
+    @media (min-width: 1024px) {
+        justify-content: flex-start;
+        column-gap: 32px;
+    }
+    &:hover {
+        @media (min-width: 1024px) {
+            background: var(--white-color);
+            & .normalBtnTxt {
+                color: #22BA4F;
+            }
+        }
+    }
+}
+
+.contactBtn {
+    background: var(--white-color);
+    font-weight: 500;
+    justify-content: center;
+    @media (min-width: 768px) {
+        max-width: 247px;
+    }
+    @media (min-width: 1024px) {
+        justify-content: flex-start;
+    }
+    &:hover {
+        @media (min-width: 1024px) {
+            background: #4D740D;
+            & .normalBtnTxt {
+                color: var(--white-color);
+            }
+        }
+    }
+    & .normalBtnTxt {
+        color: var(--text-color);
+    }
+}
+
+.footerRow {
+    width: 95%;
+    max-width: var(--content-width);
+    margin: 0 auto 56px;
+    @media (min-width: 1024px) {
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 120px;
+    }
+}
+
+
+/*--------------------------------
+	footer
+--------------------------------*/
+
+.footerInfo {
+    align-self: center;
+    @media (min-width: 768px) {
+        width: 55%;
+        margin: 0 auto;
+    }
+    @media (min-width: 1024px) {
+        width: 40%;
+    }
+}
+
+.footerLogo {
+    display: flex;
+    justify-content: center;
+    @media (min-width: 768px) {
+        justify-content: flex-start;
+    }
+}
+
+.footerLink {
+    margin-top: 32px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 25px;
+    justify-content: center;
+    @media (min-width: 768px) {
+        width: 80%;
+        justify-content: flex-start;
+    }
+    @media (min-width: 1024px) {
+        column-gap: 30px;
+        margin-left: auto;
+    }
+}
+
+.footerCopy {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 0;
+    position: relative;
+    margin-top: 32px;
+    color: #A6A5A5;
+    font-size: 1.4rem;
+    @media (min-width: 768px) {
+        margin-top: 0;
+        max-width: var(--content-width);
+        margin: 0 auto;
+    }
+}
+
+.footerInfoItem {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-bottom: 16px;
+    column-gap: 16px;
+}
+
+.footerAddress {
+    margin-top: 32px;
+    font-size: 1.4rem;
+}
