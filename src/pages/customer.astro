@@ -3,14 +3,14 @@ import '../styles/common/reset.css';
 import '../styles/common/common.css';
 import '../styles/header.css';
 import '../styles/footer.css';
-import '../styles/top.css';
+import '../styles/customer.css';
 
 import Header from '../components/header.astro';
 import Footer from '../components/footer.astro';
 import Head from '../components/head.astro';
 
 
-const pageTitle = "トップページ｜春寿し";
+const pageTitle = "初めてのお客様｜chumuru";
 ---
 
 <!DOCTYPE html>
@@ -24,179 +24,232 @@ const pageTitle = "トップページ｜春寿し";
 <body class="wrap">
 	<Header />
     <main class="content">
-        <div class="firstView">
-            <div class="firstViewImg">
-                <div class="firstViewImgTtl">
-                    <h1 class="firstViewImgTtlTxt">ヤング式腸もみで
-                        <br />あなたの内側をリフレッシュ
-                    </h1>
+        <section class="pageHeader">
+            <div class="pageHeaderBg">
+                <img width="2720" height="700" src="https://chumuru.com/system_panel/uploads/images/20240513181320987323.png" alt="初めてのお客様" class="pageHeaderImg" />
+            </div>
+            <div class="pageHeaderGroup">
+                <h1 class="pageHeaderTxt">初めてのお客様
+                </h1>
+                <p class="pageHeaderDes">First time customer
+                </p>
+            </div>
+        </section>
+        <section class="section">
+            <div class="sectionBg">
+                <div class="sectionBgImg">
+                    <img width="1440" height="918" src="https://chumuru.com/system_panel/uploads/images/20240513181320436014.png" alt="背景用の画像" class="sectionBgImg" />
                 </div>
-                <img src="https://chumuru.com/system_panel/uploads/images/20240509135248476945.png"
-                    alt="ヤング式腸もみであなたの内側をリフレッシュ" width="1075" height="571" class="img" />
+                <div class="sectionInr">
+                    <div class="overlayHead">
+                        <div class="overlayHeadGroup">
+                            <h2 class="overlayHeadJa">身体と心の不調の
+                                <br class="pcHidden" />悩みはありませんか？
+                            </h2>
+                            <p class="overlayHeadDesc">Worries
+                            </p>
+                        </div>
+                        <p class="overlayHeadEn">WORRIES
+                        </p>
+                    </div>
+                    <div class="tile">
+                        <div class="tileItem">
+                            <p class="tileItemTtl">疲れやすい
+                            </p>
+                            <img src="https://chumuru.com/system_panel/uploads/images/20240513181320163862.png" alt="疲れやすい人のイメージ画像" width="340" height="240" class="img" />
+                        </div>
+                        <div class="tileItem">
+                            <p class="tileItemTtl">便秘・下痢
+                            </p>
+                            <img src="https://chumuru.com/system_panel/uploads/images/20240513181320731407.png" alt="便秘・下痢をしている人のイメージ画像" width="340" height="240" class="img" />
+                        </div>
+                        <div class="tileItem">
+                            <p class="tileItemTtl">眠りが浅い
+                            </p>
+                            <img src="https://chumuru.com/system_panel/uploads/images/20240513181320633156.png" alt="眠りが浅い人のイメージ画像" width="340" height="240" class="img" />
+                        </div>
+                        <div class="tileItem">
+                            <p class="tileItemTtl">下腹がぽっこり
+                            </p>
+                            <img src="https://chumuru.com/system_panel/uploads/images/20240513181320548520.png" alt="下腹がぽっこりしている人のイメージ画像" width="340" height="240" class="img" />
+                        </div>
+                        <div class="tileItem">
+                            <p class="tileItemTtl">胃腸が弱い
+                            </p>
+                            <img src="https://chumuru.com/system_panel/uploads/images/20240513181320124867.png" alt="胃腸が弱い人のイメージ画像" width="340" height="240" class="img" />
+                        </div>
+                        <div class="tileItem">
+                            <p class="tileItemTtl">心の不調
+                            </p>
+                            <img src="https://chumuru.com/system_panel/uploads/images/20240513181320300468.png" alt="心の不調がある人のイメージ画像" width="340" height="240" class="img" />
+                        </div>
+                    </div>
+                </div>
+                <div class="triangle">
+                </div>
             </div>
-            <div class="firstViewHead">
-                <p class="firstViewDesc">Young style intestine massage refresh your insides
-                </p>
-                <p class="firstViewTtl">YOUNG STYLE
-                </p>
+            <div class="sectionInr decoration">
+                <div class="cooperation">
+                    <p class="txt">このようなお悩みは
+                        <br />chumuruにお任せください！
+                    </p>
+                </div>
+                <img width="312" height="200" src="https://chumuru.com/system_panel/uploads/images/20240509133217619670.png" alt="装飾用の画像" class="decorationImg" />
             </div>
-            <img src="https://chumuru.com/system_panel/uploads/images/20240509133217619670.png" alt="装飾用の画像" width="312"
-                height="200" class="decorationImg" />
-        </div>
+            <div class="rowTypeCustomer">
+                <div class="flex">
+                    <div class="txtBox">
+                        <p class="numberCount">First time customer
+                        </p>
+                        <h3 class="numberTtl">
+                            カウンセリングで<br class="pcHidden">悩みの原因を特定
+                        </h3>
+                        <p class="txt">
+                            カウンセリングでは、お客様の話を丁寧に聞き、その悩みの根本的な原因を探ります。
+                            <br />
+                            カウンセリングを通じて、お客様の自己理解を深め、困難な感情や状況に対処するための具体的な解決策や方法を見つけることができます。
+                            <br />
+                            <br />
+                            食事療法や腸もみなどを通じて、様々な問題を解決するお手伝いをさせていただきます。
+                        </p>
+                    </div>
+                    <div class="imgBox">
+                        <img src="https://chumuru.com/system_panel/uploads/images/20240513181320358498.png" alt="カウンセリングを受ける女性の画像" width="600" height="356" class="img" />
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="txtBox">
+                        <p class="numberCount">First time customer
+                        </p>
+                        <h3 class="numberTtl">
+                            ヤング式腸もみと
+                            <br />
+                            食事療法でお悩みを改善
+                        </h3>
+                        <p class="txt">
+                            ヤング式腸もみと食事療法は、様々な健康問題に対する自然療法として注目されています。
+                            <br />
+                            腸もみは腸の動きを促し、消化を助ける一方で、適切な食事療法は必要な栄養を体に供給し、内臓機能や血液の流れを正常化します。
+                            <br />
+                            <br />
+                            この二つを組み合わせることで、便秘や腹痛、むくみといった消化器系の不調はもちろん、全体的な健康状態の向上にも寄与する可能性があります。
+                        </p>
+                    </div>
+                    <div class="imgBox">
+                        <img src="https://chumuru.com/system_panel/uploads/images/20240513181320645911.png" alt="ヤング式腸もみと食事療法を受ける女性の画像" width="600" height="356" class="img" />
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="section">
             <div class="overlayHead">
-                <h2 class="overlayHeadEn">CONCEPT
-                </h2>
-            </div>
-            <div class="sectionInr illustDecoration">
-                <div class="conceptRow">
-                    <div class="txtBox">
-                        <div class="verticalBox">
-                            <div class="txtBoxHead">
-                                <div class="txtBoxTtl">
-                                    <p class="txtBoxTtlEn">chumuru
-                                    </p>
-                                    <p class="txtBoxTtlJa">の
-                                    </p>
-                                </div>
-                                <div class="txtBoxTtl">
-                                    <p class="txtBoxTtlJa">ヤング式腸もみ
-                                    </p>
-                                </div>
-                            </div>
-                            <p class="txt">chumuruは、石川県金沢市にてヤング式腸もみとヤング式食事療法を活用して、体内から健康を改善します。
-                            </p>
-                            <p class="txt">自分の健康は、自分でコントロールする力を見に付け、気になりにくい身体習慣を作っていきましょう。
-                            </p>
-                        </div>
-                    </div>
-                    <div class="imgBox overlapImgBox">
-                        <div class="backImg">
-                            <img src="https://chumuru.com/system_panel/uploads/images/20240509135248241288.png"
-                                alt="ヤング式腸もみ 施術台イメージ画像" width="498" height="323" class="largeImg img" />
-                        </div>
-                        <img src="https://chumuru.com/system_panel/uploads/images/20240509135248902422.png"
-                            alt="ヤング式腸もみ 施術イメージ画像" width="252" height="169" class="smallImg img" />
-                    </div>
-                </div>
-                <div class="conceptRow">
-                    <div class="imgBox">
-                        <img src="https://chumuru.com/system_panel/uploads/images/20240509135248947812.png"
-                            alt="ヤング式腸もみ 施術イメージ画像" width="514" height="326" class="largeImg img" />
-                    </div>
-                    <div class="txtBox">
-                        <div class="verticalBox">
-                            <p class="txt">
-                                chumuruのヤング式腸もみは、血液がきれいになる効果があり、体内の循環が改善されることで、全身の細胞へ酸素や栄養が効率良く運ばれます。さらに、自己免疫力が高まることで、体が様々な病気や感染から自らきを守る能力が向上します。
-                            </p>
-                            <p class="txt">ヤング式腸もみでは、日々の小 さな不調を自分で治す力を育て、より健康的な生活を送ることができます。
-                            </p>
-                        </div>
-                        <a href="./massage" class="normalBtn leftSide">
-                            <p class="normalBtnTxt">ヤング式腸もみ
-                            </p>
-                        </a>
-                    </div>
-                </div>
-                <img src="https://chumuru.com/system_panel/uploads/images/20240509133217218752.png" alt="装飾用の画像"
-                    width="150" height="143" class="handIllust" />
-                <img src="https://chumuru.com/system_panel/uploads/images/20240509133217570862.png" alt="装飾用の画像"
-                    width="183" height="192" class="intestineIllust" />
-            </div>
-        </section>
-        <section class="section leftTtlSection">
-            <div class="sectionInr">
-                <div class="sectionHead">
-                    <h2 class="sectionTtl">ヤング式の食事療法
+                <div class="overlayHeadGroup">
+                    <h2 class="overlayHeadJa">ご利用の流れ
                     </h2>
-                    <p class="sectionTtlDesc">Young Diet
+                    <p class="overlayHeadDesc">Usage flow
                     </p>
                 </div>
-                <div class="flex flexReverse">
-                    <div class="imgBox manyImgBox">
-                        <img src="https://chumuru.com/system_panel/uploads/images/20240509133200271546.png"
-                            alt="ヤング式食事療法 お料理のイメージ画像" width="341" height="330" class="img" />
-                        <img src="https://chumuru.com/system_panel/uploads/images/20240509133217363479.png"
-                            alt="素材野菜のイメージ画像" width="184" height="172" class="img" />
-                        <img src="https://chumuru.com/system_panel/uploads/images/20240509133200492764.png"
-                            alt="ヤング式食事療法 生穀物粉なまこっこ画像" width="231" height="281" class="img" />
-                        <div class="manyImgBoxBack">
+                <p class="overlayHeadEn">USAGE FLOW
+                </p>
+            </div>
+            <div class="leftTtlSection">
+                <div class="sectionInr rowTypeFlow">
+                    <div class="flowBox">
+                        <div class="flowBoxNum">
+                        </div>
+                        <div class="flowBoxHead">
+                            <h3 class="flowBoxTtl">ご予約
+                            </h3>
+                        </div>
+                        <div class="flowBoxBody">
+                            <p class="txt">ご予約は、LINEまたはWEB予約にてお願いいたします。
+                                <br />
+                                お問い合わせは下記お問い合わせフォームからご連絡ください。
+                            </p>
+                            <div class="normalBtnArea">
+                                <a href="https://line.me/R/ti/p/@545mglcj" target="_blank" rel="noopener" class="normalBtn lineBtn"><img src="https://chumuru.com/system_panel/uploads/images/20240509133217101594.png" alt="LINEアイコン画像" width="26" height="26" class="img" />
+                                    <p class="normalBtnTxt">LINEで予約
+                                    </p>
+                                </a>
+                                <a href="./contact" class="normalBtn contactBtn"><img src="https://chumuru.com/system_panel/uploads/images/20240509153821656928.png" alt="メールアイコン画像" width="24" height="24" class="img" />
+                                    <p class="normalBtnTxt">お問い合わせフォーム
+                                    </p>
+                                </a>
+                                <a href="https://chumuru.pos-s.net/reserve/" target="_blank" rel="noopener" class="normalBtn reserveBtn">
+                                    <p class="normalBtnTxt">WEB予約
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="flowBoxFoot">
+                            <img width="340" height="227" src="https://chumuru.com/system_panel/uploads/images/20240513181320825180.png" alt="予約を入れる際のイメージ画像" class="img" />
                         </div>
                     </div>
-                    <div class="txtBox">
-                        <p class="txt">長年病人と向き合い、生涯を健康に過ごすための食事法を研究してきた結果、生穀菜食が最も適していることが明らかになりました。
-                            <br />
-                            chumuruのヤング式食事療法は、生の野菜と穀物から直接必要な栄養を摂取することに焦点を当てています。
-                            <br />
-                            生の食材は栄養が豊富で、体の自然な解毒作用を促進し、病気のリスクを低減します。
-                        </p>
-                        <p class="txt">現代の食生活は加工食品や高カロリーな料理で溢れており、これらを常食することは多くの健康問題を引き起こす原因となります。
-                        </p>
-                        <p class="txt">そのため、chumuruのヤング式食事療法では、生穀菜食を推奨しています。
-                            <br />
-                            この食事療法により、小腸の解毒が促され、健康な体を維持することが可能です。
-                        </p>
-                        <a href="./diet" class="normalBtn leftSide">
-                            <p class="normalBtnTxt">ヤング式食事療法
+                    <div class="flowBox">
+                        <div class="flowBoxNum">
+                        </div>
+                        <div class="flowBoxHead">
+                            <h3 class="flowBoxTtl">カウンセリング
+                            </h3>
+                        </div>
+                        <div class="flowBoxBody">
+                            <p class="txt">まず、お身体の現在の悩みやそれが生じる原因を詳しくお聞きします。
+                                <br />
+                                深くお話を伺いつつ、それを理解することで最適な対応を見つけ出します。
+                                <br />
+                                そして、お伺いした情報とあなたのご要望に基づき、本日の適切なコース内容をお客様に提案させていただきます。
                             </p>
-                        </a>
+                        </div>
+                        <div class="flowBoxFoot">
+                            <img width="340" height="227" src="https://chumuru.com/system_panel/uploads/images/20240513181320964326.png" alt="カウンセリングを受けている男性の画像" class="img" />
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="overlayHead">
-                <div class="overlayHeadBack">
-                    <p class="overlayHeadEn">FOODS
-                    </p>
-                </div>
-            </div>
-            <div class="tile">
-                <div class="tileItem">
-                    <img src="https://chumuru.com/system_panel/uploads/images/20240509133200513788.png"
-                        alt="ヤング式食事療法メニュー画像その1" width="340" height="240" class="img" />
-                </div>
-                <div class="tileItem">
-                    <img src="https://chumuru.com/system_panel/uploads/images/20240509133217421233.png"
-                        alt="ヤング式食事療法メニュー画像その2" width="340" height="240" class="img" />
-                </div>
-                <div class="tileItem">
-                    <img src="https://chumuru.com/system_panel/uploads/images/20240509133217495098.png"
-                        alt="ヤング式食事療法メニュー画像その3" width="340" height="240" class="img" />
+                    <div class="flowBox">
+                        <div class="flowBoxNum">
+                        </div>
+                        <div class="flowBoxHead">
+                            <h3 class="flowBoxTtl">コーススタート
+                            </h3>
+                        </div>
+                        <div class="flowBoxBody">
+                            <p class="txt">初めに、お客様の姿勢や動きを詳しく確認し、身体の現状を正確に理解します。
+                                <br />
+                                その上で、ヤング式腸もみを行います。
+                                <br />
+                                さらに、継続的に食のケアを行っていただくための方法やアドバイスも提供します。
+                                <br />
+                                お伝えするケア方法は、お客様の日常に無理なく取り入れられるよう設計されていますので、ぜひ継続してお試しいただければと思います。
+                            </p>
+                        </div>
+                        <div class="flowBoxFoot">
+                            <img width="340" height="227" src="https://chumuru.com/system_panel/uploads/images/20240513181320720880.png" alt="ヤング式腸もみの施術を受けている画像" class="img" />
+                        </div>
+                    </div>
+                    <div class="flowBox">
+                        <div class="flowBoxNum">
+                        </div>
+                        <div class="flowBoxHead">
+                            <h3 class="flowBoxTtl">フィードバック・サポート
+                            </h3>
+                        </div>
+                        <div class="flowBoxBody">
+                            <p class="txt">様々な症状や不調の背後にある問題点を明らかにし、その解決への食事療法やヤング式腸もみのアプローチを共に計画するステップです。
+                                <br />
+                                目指すは、より健康で活力ある身体。
+                                <br />
+                                お客様一人ひとりのニーズに合わせた最適なケアプランを共に策定し、フレッシュなお身体を目指しましょう。
+                                <br />
+                                施術後のフォローも行っており、万全のサポート体制を整えています。お客様が元気になれるよう、全力でサポートに取り組んでいます。
+                            </p>
+                        </div>
+                        <div class="flowBoxFoot">
+                            <img width="340" height="227" src="https://chumuru.com/system_panel/uploads/images/20240513181320183228.png" alt="フィードバックをするイメージ画像" class="img" />
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        <section class="linkSection sectionBg">
-            <div class="sectionBgImg">
-                <img src="https://chumuru.com/system_panel/uploads/images/20240509133410266744.png" alt="背景用の画像"
-                    width="2880" height="738" class="img" />
-            </div>
-            <div class="sectionInr flex">
-                <div class="linkBox">
-                    <a href="./customer" class="imgLink"><img
-                            src="https://chumuru.com/system_panel/uploads/images/20240509133410840862.png"
-                            alt="初めてのお客様 背景用の画像" width="1060" height="400" class="backImg" />
-                        <div class="front">
-                            <p class="frontTxt">初めてのお客様
-                            </p>
-                            <p class="frontTxtDesc">First time customer
-                            </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="linkBox">
-                    <a href="./menu" class="imgLink"><img
-                            src="https://chumuru.com/system_panel/uploads/images/20240509133410867618.png"
-                            alt="メニュー 背景用の画像" width="1060" height="400" class="backImg" />
-                        <div class="front">
-                            <p class="frontTxt">メニュー
-                            </p>
-                            <p class="frontTxtDesc">Menu
-                            </p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
+    </div>
 	<Footer />
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="../assets/js/script.js"></script>
