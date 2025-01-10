@@ -75,6 +75,19 @@
     }
 }
 
+.map {
+    max-width: 489px;
+    width: 100%;
+    aspect-ratio: 551/391;
+    height: 391px;
+}
+
+@media (min-width: 1000px) {
+    .map {
+        height: 391px;
+    }
+}
+
 .accessInfoItemHead {
     max-width: 25%;
     width: 100%;
